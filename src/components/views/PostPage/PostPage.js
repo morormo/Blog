@@ -1,36 +1,74 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import styles from 'style';
+import styles from './PostPage.module.scss';
+import Sidebar from '../../common/Sidebar/Sidebar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 class PostPage extends Component {
 
   state = {
-    post: null
+    post: [ ],
+    comments: [ ],
   }
 
   componentDidMount() {
     let id =  this.props.match.params.post_id;
+
     axios.get('https://jsonplaceholder.typicode.com/posts/' + id)
       .then(res => {
         this.setState({
           post: res.data
         })
-        console.log(res)
       })
+    axios.get('https://jsonplaceholder.typicode.com/posts/'+ id +'/comments')
+      .then(res => {
+        this.setState({
+          comments: res.data
+        })
+      })
+
   }
   render(){
-    const post = this.state.post ? (
-      <div className='post'>
-        <h4>{this.state.post.title}</h4>
-        <p>{this.state.post.body}</p>
-      </div>
-    ) : (
-      <div className="loading">Loading post...</div>
-    )
+    const { post, comments } = this.state;
 
     return (
       <div className='root'>
-        {post}
+        <div className={styles.root}>
+          <div className='row'>
+            <div className='col-8'>
+              <div className='row'>
+                <div className={`col-12 ${styles.article}`}>
+                  <div className={styles.image}>
+                    <img src="https://via.placeholder.com/600/24f355"></img>
+                  </div>
+                  <h4>{post.title}</h4>
+                  <p>{post.body}</p>
+                </div>
+                <div className={`col-12 ${styles.comments}`}>
+                  <h3>KOMENTARZE {this.state.comments.length}</h3>
+                  {comments.map (comment => (
+                    <div className={`row ${styles.comment}`} key={comment.id}>
+                      <div className={`col-1 ${styles.icon}`}>
+                        <FontAwesomeIcon icon={faUser} />
+                      </div>
+                      <div className={`col-10 ${styles.content}`}>
+                        <h4>{comment.email}</h4>
+                        <p>{comment.body}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className={`col ${styles.addcomments}`}>
+
+                </div>
+              </div>
+            </div>
+            <div className={`col-4 ${styles.sidebar}`}>
+              <Sidebar />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

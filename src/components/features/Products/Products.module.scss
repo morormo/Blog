@@ -15,16 +15,20 @@ p {
   color: #777777;
 }
 
-// a {
-//   color: red;
-//   text-decoration: none;
-//   font-style: oblique;
-// }
+.more {
+  color: $base-color;
+  font-weight: bold;
+}
 
 .post {
   border-bottom: 1px solid #efefef;
   margin: 0 0 60px 0;
   padding: 0 0 53px 0;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }
 
 .sidebar {

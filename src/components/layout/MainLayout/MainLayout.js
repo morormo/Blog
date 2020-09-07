@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../Header/Header';
+import Header from '../../features/Header/Header';
 import styles from './MainLayout.module.scss';
 import Footer from '../../features/Footer/Footer';
 

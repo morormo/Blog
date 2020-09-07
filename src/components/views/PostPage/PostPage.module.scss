@@ -1,0 +1,40 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  width: 1300px;
+  margin: 50px auto;
+
+  .article {
+    .image {
+      text-align: center;
+    }
+  }
+
+  .comments {
+    .comment {
+      .icon {
+        text-align: center;
+        padding-top: 30px;
+      }
+
+      .content {
+        background-color: #f9f9f9;
+        border-radius: 2px;
+        padding: 20px 20px 0 20px;
+        margin-bottom: 40px;
+
+        h4 {
+          font-size: 14px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    border-left: 1px solid #efefef;
+  }
+
+}

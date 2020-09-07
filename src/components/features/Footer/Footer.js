@@ -6,10 +6,10 @@ import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fort
 const Footer = () => (
   <div className={styles.root}>
     <div className={`row ${styles.footer}`}>
-      <div className='col-8'>
+      <div className='col-12 col-md-8'>
         &copy; Daniel Stokłosa | Blog
       </div>
-      <div className={`col-4 ${styles.society}`}>
+      <div className={`col-12 col-md-4 ${styles.society}`}>
         <ul>
           <li>
             <FontAwesomeIcon className={styles.icon} icon={faFacebook} />
