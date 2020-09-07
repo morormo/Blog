@@ -1,0 +1,32 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  max-width: 1300px;
+  margin: 50px auto;
+}
+
+.title {
+  color: $base-color;
+  cursor: pointer;
+  text-transform: uppercase ;
+}
+
+p {
+  color: #777777;
+}
+
+// a {
+//   color: red;
+//   text-decoration: none;
+//   font-style: oblique;
+// }
+
+.post {
+  border-bottom: 1px solid #efefef;
+  margin: 0 0 60px 0;
+  padding: 0 0 53px 0;
+}
+
+.sidebar {
+  border-left: 1px solid #efefef;
+}

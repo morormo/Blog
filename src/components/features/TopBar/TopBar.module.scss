@@ -1,0 +1,32 @@
+nav {
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.16);
+  width: 100%;
+  line-height: 90px;
+
+  ul {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    max-width: 1500px;
+    li {
+      list-style: none;
+      display: inline-block;
+      padding-left: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #777777;
+        font-weight: bold;
+
+        &:hover {
+          color: #26cdc7;
+        }
+      }
+    }
+  }
+}
