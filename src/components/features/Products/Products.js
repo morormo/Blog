@@ -3,7 +3,7 @@ import styles from './Products.module.scss';
 import axios from 'axios';
 import Sidebar from '../../common/Sidebar/Sidebar';
 
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Products extends Component {
   state = {
@@ -37,8 +37,10 @@ class Products extends Component {
                       <img src="https://via.placeholder.com/150/24f355"></img>
                     </div>
                     <div className='col-9'>
-                      <h2 className={styles.title}>{post.title}</h2>
-                      <p>{post.body.slice(0,100)}... <a href="#">czytaj więcej →</a></p>
+                      <Link to={'/' + post.id}>
+                        <h2 className={styles.title}>{post.title}</h2>
+                        <p>{post.body.slice(0,100)}... <a href="#">czytaj więcej →</a></p>
+                      </Link>
                     </div>
                   </div>
                 </div>

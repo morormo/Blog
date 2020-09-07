@@ -1,8 +1,9 @@
 import React from 'react';
+import Products from '../../features/Products/Products';
 
 const HomePage = () => (
-  <div className='root'>
-    sdsd
+  <div>
+    <Products />
   </div>
 );
 
