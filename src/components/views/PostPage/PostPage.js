@@ -35,7 +35,7 @@ class PostPage extends Component {
     return (
       <div className='container'>
         <div className='row'>
-          <div className='col-12 col-md-8'>
+          <div className='col-xs-12 col-md-8'>
             <div className='row'>
               <div className={`col-12 ${styles.article}`}>
                 <div className='row'>
@@ -66,7 +66,7 @@ class PostPage extends Component {
               </div>
             </div>
           </div>
-          <div className={`col-12 col-md-4 ${styles.sidebar}`}>
+          <div className={`d-none d-md-block col-md-4 ${styles.sidebar}`}>
             <Sidebar />
           </div>
         </div>

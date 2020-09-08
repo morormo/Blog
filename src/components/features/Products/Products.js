@@ -26,17 +26,17 @@ class Products extends Component {
       <div className='container'>
         <section>
           <div className='row'>
-            <div className='col-12 col-md-8'>
+            <div className='col-12 col-lg-8'>
               {posts.map (post => (
                 <div
                 className={`row ${styles.post}`}
                 key={post.id}
                 >
                   <div className='row'>
-                    <div className='col-12 col-md-3'>
+                    <div className='col-12 col-lg-3'>
                       <img src="https://via.placeholder.com/150/24f355"></img>
                     </div>
-                    <div className='col-12 col-md-9'>
+                    <div className='col-12 col-lg-9'>
                       <Link to={'/' + post.id}>
                         <h2 className={styles.title}>{post.title}</h2>
                         <p>{post.body.slice(0,100)}... <span className={styles.more}>czytaj więcej →</span></p>

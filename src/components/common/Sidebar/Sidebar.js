@@ -9,15 +9,10 @@ const Sidebar = () => (
   <div className={`row ${styles.sidebar}`}>
     <div className='col'>
       <div className='row'>
-        <div className={`col-12`}>
-          <input type='text'></input>
-        </div>
-      </div>
-      <div className='row'>
         <div className={`col ${styles.about}`}>
           <h3>O mnie</h3>
           <img src="/images/avatar.png" className='avatar'></img>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra imperdiet velit sit amet rutrum. Duis enim velit, tristique quis rutrum nec, rhoncus ac metus. Pellentesque ullamcorper dui ut quam bibendum, id congue tortor interdum. <a href="#">Czytaj o mnie więcej →</a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra imperdiet velit sit amet rutrum. Duis enim velit, tristique quis rutrum nec, rhoncus ac metus. Pellentesque ullamcorper dui ut quam bibendum, id congue tortor interdum.</p>
         </div>
       </div>
       <div className='row'>

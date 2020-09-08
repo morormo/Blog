@@ -1,15 +1,22 @@
 @import "../../../styles/settings.scss";
 
 .article {
+  margin-top: 50px;
+  border-bottom: 1px solid #efefef;
+
+
   .image {
     background-image: url('https://via.placeholder.com/600/24f355');
     min-height: 375px;
     max-width: 600px;
-    object-fit: cover;
+    background-size: cover;
+    margin-bottom: 20px;
   }
 }
 
 .comments {
+  margin-top: 20px;
+
   .comment {
     .icon {
       text-align: center;
