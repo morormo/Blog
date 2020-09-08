@@ -33,40 +33,41 @@ class PostPage extends Component {
     const { post, comments } = this.state;
 
     return (
-      <div className='root'>
-        <div className={styles.root}>
-          <div className='row'>
-            <div className='col-8'>
-              <div className='row'>
-                <div className={`col-12 ${styles.article}`}>
-                  <div className={styles.image}>
-                    <img src="https://via.placeholder.com/600/24f355"></img>
-                  </div>
-                  <h4>{post.title}</h4>
-                  <p>{post.body}</p>
-                </div>
-                <div className={`col-12 ${styles.comments}`}>
-                  <h3>KOMENTARZE {this.state.comments.length}</h3>
-                  {comments.map (comment => (
-                    <div className={`row ${styles.comment}`} key={comment.id}>
-                      <div className={`col-1 ${styles.icon}`}>
-                        <FontAwesomeIcon icon={faUser} />
-                      </div>
-                      <div className={`col-10 ${styles.content}`}>
-                        <h4>{comment.email}</h4>
-                        <p>{comment.body}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className={`col ${styles.addcomments}`}>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-12 col-md-8'>
+            <div className='row'>
+              <div className={`col-12 ${styles.article}`}>
+                <div className='row'>
+                  <div className={`col-12 ${styles.image}`}>
 
+                  </div>
+                  <div className='col-12'>
+                    <h4>{post.title}</h4>
+                    <p>{post.body}</p>
+                  </div>
                 </div>
               </div>
+              <div className={`col-12 ${styles.comments}`}>
+                <h3>KOMENTARZE {this.state.comments.length}</h3>
+                {comments.map (comment => (
+                  <div className={`row ${styles.comment}`} key={comment.id}>
+                    <div className={`col-1 ${styles.icon}`}>
+                      <FontAwesomeIcon icon={faUser} />
+                    </div>
+                    <div className={`col-10 ${styles.content}`}>
+                      <h4>{comment.email}</h4>
+                      <p>{comment.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className={`col ${styles.addcomments}`}>
+              </div>
             </div>
-            <div className={`col-4 ${styles.sidebar}`}>
-              <Sidebar />
-            </div>
+          </div>
+          <div className={`col-12 col-md-4 ${styles.sidebar}`}>
+            <Sidebar />
           </div>
         </div>
       </div>

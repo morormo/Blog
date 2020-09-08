@@ -5,6 +5,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => (
+  <div className='container'>
   <div className={`row ${styles.sidebar}`}>
     <div className='col'>
       <div className='row'>
@@ -55,7 +56,7 @@ const Sidebar = () => (
                 <FontAwesomeIcon icon={faInstagram}/>
               </div>
             </a>
-            <a href="www.linkedin.com/in/daniel-stoklosa" alt="linkedin">
+            <a href="https://www.linkedin.com/in/daniel-stoklosa" alt="linkedin">
               <div className={`col-3 ${styles.icon}`}>
                 <FontAwesomeIcon icon={faLinkedin}/>
               </div>
@@ -64,6 +65,7 @@ const Sidebar = () => (
         </div>
       </div>
     </div>
+  </div>
   </div>
 );
 

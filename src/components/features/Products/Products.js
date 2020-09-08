@@ -23,7 +23,7 @@ class Products extends Component {
     const { posts } = this.state;
 
     return (
-      <div className={styles.root}>
+      <div className='container'>
         <section>
           <div className='row'>
             <div className='col-12 col-md-8'>
